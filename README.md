@@ -85,7 +85,7 @@ graph LR
 
 ## 👨‍💻 About
 
-我是 [Your Name]，一名热衷于 AI 工程化与系统架构的 CS 本科生。
+我是 Eric ，一名热衷于 AI 工程化与系统架构的 CS 本科生。
 
 我相信最好的学习方式是造轮子，而 Second-Brain-Local 是我探索 LLM 本地化应用的一次深度实践。
 
