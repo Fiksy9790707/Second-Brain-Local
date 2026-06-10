@@ -1,0 +1,2 @@
+# Current demo uses only the Python standard library.
+# Planned optional dependencies: ollama, chromadb, streamlit.
