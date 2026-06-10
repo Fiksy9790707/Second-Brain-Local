@@ -1,0 +1,4 @@
+{
+  "query": "What does the note say about local RAG privacy?",
+  "expected_terms": ["local", "private", "notes", "machine"]
+}
