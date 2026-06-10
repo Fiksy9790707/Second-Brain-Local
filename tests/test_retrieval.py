@@ -4,6 +4,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
+from second_brain_local.ollama_client import build_prompt
 from second_brain_local.retrieval import answer_query, load_markdown, retrieve
 
 
@@ -21,3 +22,12 @@ def test_answer_query_shape():
     result = answer_query("Ollama ChromaDB", matches)
     assert result["query"] == "Ollama ChromaDB"
     assert isinstance(result["contexts"], list)
+
+
+def test_build_prompt_contains_context():
+    chunks = load_markdown(ROOT / "examples" / "sample_notes.md")
+    matches = retrieve("local RAG privacy", chunks)
+    prompt = build_prompt("local RAG privacy", matches)
+    assert "Question:" in prompt
+    assert "Context:" in prompt
+    assert "Local RAG" in prompt
